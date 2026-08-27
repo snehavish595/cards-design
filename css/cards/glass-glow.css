@@ -1,0 +1,51 @@
+.glass-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(168, 85, 247, 0.15),
+    transparent 40%
+  );
+  z-index: 0;
+  pointer-events: none;
+}
+
+.glass-card-content {
+  position: relative;
+  z-index: 1;
+}
+
+.icon-box {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.glass-card .card-btn {
+  background: transparent;
+  border: 1px solid var(--accent-purple);
+  color: var(--accent-purple);
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.glass-card .card-btn:hover {
+  background: var(--accent-purple);
+  color: white;
+}

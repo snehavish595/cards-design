@@ -1,0 +1,55 @@
+.holo-card {
+  position: relative;
+  background: #12131c;
+  border-radius: 16px;
+  padding: 2rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.holo-card:hover {
+  transform: translateY(-6px);
+}
+
+.holo-shimmer {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    115deg,
+    transparent 20%,
+    rgba(255, 0, 150, 0.2) 40%,
+    rgba(0, 255, 255, 0.2) 60%,
+    transparent 80%
+  );
+  transform: rotate(-30deg) translateY(-100%);
+  transition: transform 0.7s ease;
+  pointer-events: none;
+}
+
+.holo-card:hover .holo-shimmer {
+  transform: rotate(-30deg) translateY(100%);
+}
+
+.holo-card .card-badge {
+  background: rgba(236, 72, 153, 0.2);
+  color: #ec4899;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.75rem;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.holo-card .card-btn {
+  background: #ec4899;
+  border: none;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+}

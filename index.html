@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diverse UI Card Component System</title>
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/cyber-card.css" />
+  <link rel="stylesheet" href="css/clay-card.css" />
+  <link rel="stylesheet" href="css/luxury-card.css" />
+  <!-- Google Fonts: Inter, Serif, & Space Mono -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Plus+Jakarta+Sans:wght@600;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <main class="showcase-grid">
+
+    <!-- DESIGN 1: Cyberpunk HUD Terminal -->
+    <article class="cyber-card">
+      <div class="cyber-scanline"></div>
+      <div class="cyber-header">
+        <span class="cyber-tag">// SYS.01</span>
+        <span class="cyber-status">ONLINE</span>
+      </div>
+      <div class="cyber-content">
+        <h2>NEON OVERDRIVE</h2>
+        <p>Quantum processing core executing async subroutines.</p>
+      </div>
+      <div class="cyber-footer">
+        <button class="cyber-btn" onclick="triggerGlitch(this)">[ INITIALIZE ]</button>
+      </div>
+    </article>
+
+    <!-- DESIGN 2: Tactile 3D Claymorphism -->
+    <article class="clay-card">
+      <div class="clay-badge">NEW</div>
+      <div class="clay-icon-bubble">✨</div>
+      <div class="clay-content">
+        <h2>Soft 3D Touch</h2>
+        <p>Tactile, squishy UI design built with dual inner and drop shadows.</p>
+      </div>
+      <button class="clay-btn">Claim Reward</button>
+    </article>
+
+    <!-- DESIGN 3: Minimalist Luxury Editorial -->
+    <article class="luxury-card">
+      <div class="luxury-meta">
+        <span>COLLECTION N° 04</span>
+        <span>2026</span>
+      </div>
+      <div class="luxury-image-frame">
+        <div class="luxury-img"></div>
+      </div>
+      <div class="luxury-content">
+        <h2>Monochrome Architecture</h2>
+        <p>Stripped back aesthetics prioritizing editorial typography and spacing.</p>
+        <a href="#" class="luxury-link">Explore Edition</a>
+      </div>
+    </article>
+
+  </main>
+
+  <script src="js/interactive.js"></script>
+</body>
+</html>

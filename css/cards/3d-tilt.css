@@ -1,0 +1,41 @@
+.tilt-card {
+  perspective: 1000px;
+}
+
+.tilt-card-inner {
+  background: linear-gradient(135deg, #1e1e2f 0%, #11111d 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  transform-style: preserve-3d;
+  transition: transform 0.1s ease-out, box-shadow 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.tilt-card:hover .tilt-card-inner {
+  box-shadow: 0 20px 40px rgba(6, 182, 212, 0.2);
+}
+
+.tilt-card-inner .card-title {
+  transform: translateZ(30px);
+  color: #fff;
+  margin-top: 1rem;
+}
+
+.tilt-card-inner .card-text {
+  transform: translateZ(20px);
+  color: var(--text-sub);
+  margin: 0.75rem 0 1.5rem 0;
+  font-size: 0.9rem;
+}
+
+.tilt-card-inner .card-btn {
+  transform: translateZ(40px);
+  background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple));
+  border: none;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
