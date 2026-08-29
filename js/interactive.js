@@ -19,3 +19,22 @@ function triggerGlitch(button) {
     button.style.color = '#00ffcc';
   }, 3000);
 }
+
+function toggleBlueprintDraft(button) {
+  const card = button.closest('.blueprint-card');
+  const tag = card.querySelector('.blueprint-tag');
+  
+  if (button.innerText === 'COMPILE SPEC') {
+    button.innerText = 'SPEC COMPILED ✓';
+    button.style.background = '#33ee88';
+    button.style.color = '#003366';
+    button.style.borderColor = '#33ee88';
+    tag.innerText = 'CAD // APPROVED';
+  } else {
+    button.innerText = 'COMPILE SPEC';
+    button.style.background = 'transparent';
+    button.style.color = '#ffffff';
+    button.style.borderColor = '#66b2ff';
+    tag.innerText = 'CAD // REV 2.4';
+  }
+}
