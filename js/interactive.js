@@ -38,3 +38,16 @@ function toggleBlueprintDraft(button) {
     tag.innerText = 'CAD // REV 2.4';
   }
 }
+
+function triggerChromeShimmer(button) {
+  const originalText = button.innerText;
+  button.innerText = 'MINTED ✓';
+  button.style.background = 'linear-gradient(135deg, #38bdf8, #818cf8)';
+  button.style.color = '#ffffff';
+
+  setTimeout(() => {
+    button.innerText = originalText;
+    button.style.background = 'linear-gradient(135deg, #ffffff 0%, #d4d4d8 100%)';
+    button.style.color = '#090a0f';
+  }, 2000);
+}
