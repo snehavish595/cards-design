@@ -1,0 +1,162 @@
+.organic-card {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  position: relative;
+  background: #03131a;
+  border-radius: 36px 16px 36px 16px; /* Asymmetrical organic curvature */
+  padding: 2.25rem;
+  border: 1px solid rgba(52, 211, 153, 0.25);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), inset 0 0 30px rgba(16, 185, 129, 0.1);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.organic-card:hover {
+  border-radius: 16px 36px 16px 36px;
+  transform: translateY(-6px) scale(1.02);
+  border-color: rgba(52, 211, 153, 0.6);
+  box-shadow: 0 30px 60px rgba(16, 185, 129, 0.25);
+}
+
+/* Floating Fluid Orbs */
+.fluid-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(30px);
+  opacity: 0.6;
+  pointer-events: none;
+  animation: floatOrb 8s infinite alternate ease-in-out;
+}
+
+.orb-1 {
+  width: 120px;
+  height: 120px;
+  background: #10b981;
+  top: -20px;
+  left: -20px;
+}
+
+.orb-2 {
+  width: 140px;
+  height: 140px;
+  background: #06b6d4;
+  bottom: -30px;
+  right: -30px;
+  animation-delay: -3s;
+}
+
+.orb-3 {
+  width: 80px;
+  height: 80px;
+  background: #a855f7;
+  top: 40%;
+  left: 30%;
+  animation-delay: -5s;
+}
+
+@keyframes floatOrb {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(30px, 25px) scale(1.3); }
+}
+
+.organic-inner {
+  position: relative;
+  z-index: 2;
+  backdrop-filter: blur(16px);
+  background: rgba(3, 19, 26, 0.6);
+  border-radius: 24px;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.organic-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.organic-badge {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  border: 1px solid rgba(52, 211, 153, 0.3);
+}
+
+.pulse-dot {
+  width: 10px;
+  height: 10px;
+  background: #34d399;
+  border-radius: 50%;
+  box-shadow: 0 0 12px #34d399;
+  animation: organicPulse 1.8s infinite;
+}
+
+@keyframes organicPulse {
+  0%, 100% { transform: scale(0.8); opacity: 0.5; }
+  50% { transform: scale(1.4); opacity: 1; }
+}
+
+.organic-visual {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+/* Organic Morphing Blob Bubble */
+.liquid-bubble {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #10b981, #06b6d4);
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  box-shadow: 0 10px 25px rgba(6, 182, 212, 0.4);
+  animation: morphBlob 6s ease-in-out infinite;
+}
+
+@keyframes morphBlob {
+  0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+  50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+  100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+}
+
+.organic-content h2 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #f0fdf4;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.02em;
+}
+
+.organic-content p {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.organic-btn {
+  width: 100%;
+  padding: 0.85rem;
+  background: rgba(52, 211, 153, 0.15);
+  color: #34d399;
+  border: 1px solid rgba(52, 211, 153, 0.4);
+  border-radius: 16px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.organic-btn:hover {
+  background: #34d399;
+  color: #03131a;
+  box-shadow: 0 0 20px rgba(52, 211, 153, 0.6);
+}

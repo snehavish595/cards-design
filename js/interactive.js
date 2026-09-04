@@ -51,3 +51,27 @@ function triggerChromeShimmer(button) {
     button.style.color = '#090a0f';
   }, 2000);
 }
+
+
+function triggerOrganicPulse(button) {
+  const card = button.closest('.organic-card');
+  const bubble = card.querySelector('.liquid-bubble');
+  
+  button.innerText = 'MUTATED 🧬';
+  button.style.background = '#a855f7';
+  button.style.color = '#ffffff';
+  button.style.borderColor = '#a855f7';
+  
+  bubble.style.background = 'linear-gradient(135deg, #a855f7, #ec4899)';
+  bubble.style.transform = 'scale(1.25) rotate(180deg)';
+
+  setTimeout(() => {
+    button.innerText = 'MUTATE STATE';
+    button.style.background = 'rgba(52, 211, 153, 0.15)';
+    button.style.color = '#34d399';
+    button.style.borderColor = 'rgba(52, 211, 153, 0.4)';
+    
+    bubble.style.background = 'linear-gradient(135deg, #10b981, #06b6d4)';
+    bubble.style.transform = 'none';
+  }, 2500);
+}
