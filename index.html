@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/blueprint-card.css" />
   <link rel="stylesheet" href="css/chrome-card.css" />
   <link rel="stylesheet" href="css/organic-card.css" />
+  <link rel="stylesheet" href="css/analytics-card.css" />
   <!-- Google Fonts: Inter, Serif, & Space Mono -->
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Plus+Jakarta+Sans:wght@600;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/synthwave-card.css" />
@@ -157,6 +158,43 @@
     </div>
 
     <button class="organic-btn" onclick="triggerOrganicPulse(this)">MUTATE STATE</button>
+  </div>
+</article>
+
+<!-- Design 8 -->
+ <article class="analytics-card">
+  <div class="card-top">
+    <div class="icon-wrapper">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+      </svg>
+    </div>
+    <span class="badge positive">+14.2%</span>
+  </div>
+
+  <div class="card-body">
+    <span class="metric-label">Total Revenue</span>
+    <h3 class="metric-value">$48,294.00</h3>
+    <p class="metric-subtext">vs. $42,280.00 last month</p>
+  </div>
+
+  <div class="sparkline">
+    <div class="bar" style="--height: 40%"></div>
+    <div class="bar" style="--height: 65%"></div>
+    <div class="bar" style="--height: 50%"></div>
+    <div class="bar" style="--height: 85%"></div>
+    <div class="bar" style="--height: 70%"></div>
+    <div class="bar" style="--height: 100%"></div>
+    <div class="bar" style="--height: 90%"></div>
+  </div>
+
+  <div class="card-footer">
+    <button class="action-btn" onclick="toggleAnalyticsView(this)">
+      <span>View Details</span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </button>
   </div>
 </article>
 

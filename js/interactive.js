@@ -75,3 +75,21 @@ function triggerOrganicPulse(button) {
     bubble.style.transform = 'none';
   }, 2500);
 }
+
+function toggleAnalyticsView(button) {
+  const card = button.closest('.analytics-card');
+  const value = card.querySelector('.metric-value');
+  const label = card.querySelector('.metric-label');
+
+  if (button.dataset.active === "true") {
+    value.innerText = '$48,294.00';
+    label.innerText = 'Total Revenue';
+    button.querySelector('span').innerText = 'View Details';
+    button.dataset.active = "false";
+  } else {
+    value.innerText = '1,420 Orders';
+    label.innerText = 'Quarterly Volume';
+    button.querySelector('span').innerText = 'Back to Summary';
+    button.dataset.active = "true";
+  }
+}
